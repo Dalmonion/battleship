@@ -30,14 +30,19 @@ public class Board {
 
     @Override
     public String toString() {
-        String result = "  A B C D E F G H I J\n";
+        StringBuilder builder = new StringBuilder();
+        builder.append("   A B C D E F G H I J\n");
         for (int i = 0; i < board.length; i++) {
-            result += String.valueOf(i + 1) + " ";
-            for (int j = 0; j < board.length; j++) {
-                result += board[i][j] + " ";
+            if (i < 9) {
+                builder.append(String.valueOf(i + 1)).append("  ");
+            } else {
+                builder.append(String.valueOf(i + 1)).append(" ");
             }
-            result += "\n";
+            for (int j = 0; j < board.length; j++) {
+                builder.append(board[i][j]).append(" ");
+            }
+            builder.append("\n");
         }
-        return result;
+        return builder.toString();
     }
 }
