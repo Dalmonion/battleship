@@ -3,6 +3,7 @@ package com.globallogic.battleship;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 //@SpringBootApplication
 public class BattleshipApplication {
 
@@ -12,5 +13,4 @@ public class BattleshipApplication {
 		board.createBoard();
 		System.out.println(board.toString());
 	}
-
 }
